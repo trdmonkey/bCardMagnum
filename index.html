@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bCard Magnum SC</title>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/20cee36f21.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>HOLA GEORGE</h1>
+<body id="body" class="theme-dark">
+
+    <input type="checkbox" id="menu">
+    <input type="checkbox" id="night">
+    <div id="container">
+        <div class="header">
+            <label for="night" class="night-mode">
+                <i class="fa-solid fa-moon"></i>
+            </label>
+        </div>
+        <section class="left-section">
+            <img src="./assets/img/logooscuro.png" alt="" class="profile-pic">
+            <div class="profile-details">
+                <span class="profile-maps">
+                    <i class="fa-solid fa-location-dot"></i> Pasto - Nariño.
+                </span>
+                <p class="profile-name">MAGNUM SC</p>
+                <span class="profile-summary">Solucion Contable</span>
+                <a href="#" class="profile-cv">Agendar cita</a>
+            </div>
+            <div class="profile-pills">
+                <span class="pills"></span>
+                <span class="pills"></span>
+                <span class="pills"></span>
+                <span class="pills"></span>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
