@@ -9,12 +9,20 @@
     --back: #dfdfec;
     --element: linear-gradient(45deg, #bfbfd9, #fff);
     --shadow: #bfbfd9;
-    --pils-back: ;
-
-
-
+    --pils-back: rgba(0, 0, 0, 0.05);
+    --text-primary: #333;
+    --text-secondary: #555;
+    --text-third: #000;
+    --text-cv: green;
 }
 
 .theme-dark {
-
+    --back: #131417;
+    --element: linear-gradient(45deg, #101010, #2c3e50) ;
+    --shadow: #3f5973;
+    --pils-back: rgba(255, 255, 255, 0.05);
+    --text-primary: white;
+    --text-secondary: #6b8cae;
+    --text-third: #777;
+    --text-cv: orange;
 }
