@@ -19,7 +19,7 @@
             </label>
         </div>
         <section class="left-section">
-            <img src="./assets/img/logooscuro.png" alt="" class="profile-pic">
+            <img src="./assets/img/logo.png" alt="" class="profile-pic" id="logo-img">
             <div class="profile-details">
                 <span class="profile-maps">
                     <i class="fa-solid fa-location-dot"></i> Pasto, Nariño.
@@ -41,14 +41,26 @@
     <script>
         let enableNight = () => {
             var body = document.getElementById("body");
+            var logoImg = document.getElementById("logo-img");
+    
             if (body.classList.contains('theme--light')) {
+                // Cambiar a modo oscuro
                 body.classList.remove('theme--light');
                 body.classList.add('theme--dark');
+                
+                // Cambiar la imagen a la versión clara
+                logoImg.src = "./assets/img/logo.png";
             } else {
+                // Cambiar a modo claro
                 body.classList.remove('theme--dark');
                 body.classList.add('theme--light');
+                
+                // Cambiar la imagen a la versión oscura
+                logoImg.src = "./assets/img/logooscuro.png";
             }
         }
     </script>
 </body>
 </html>
+
+
