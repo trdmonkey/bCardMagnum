@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta character -->
     <meta charset="UTF-8">
+
+    <!-- devices format -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
     <title>bCard Magnum SC</title>
+
+    <!-- favicon -->
     <link rel="shortcut icon" href="./assets/img/icon16.png" type="image/x-icon">
+
+    <!-- css -->
     <link rel="stylesheet" href="main.css">
+
+    <!-- fontawesome icons -->
     <script src="https://kit.fontawesome.com/20cee36f21.js" crossorigin="anonymous"></script>
+
+    <!-- cnd typed -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> 
 
 </head>
 <body id="body" class="theme--dark">
@@ -15,7 +29,7 @@
     <div id="container">
         <div class="header">
             <label for="night" class="night-mode" onclick="enableNight()">
-                <i id="mode-icon" class="fa-solid fa-sun"></i>
+                <i id="mode-icon" class="fa-solid fa-toggle-off"></i>
             </label>
         </div>
         <section class="left-section">
@@ -25,7 +39,8 @@
                     <i class="fa-solid fa-location-dot"></i> Pasto, Nariño.
                 </span>
                 <p class="profile-name">MAGNUM Solucion Contable</p>
-                <span class="profile-summary one">Eduardo Benavides</span><br>
+                <span class="auto-type profile-summary one"></span><br>
+                <!-- <span class="profile-summary one">Eduardo Benavides</span><br> -->
                 <span class="profile-summary two">Gerente General</span>
                 <a href="#" class="profile-cv">Agendar Cita</a>
             </div>
@@ -54,7 +69,7 @@
                 
                 // Cambiar el icono a la luna
                 modeIcon.className = ''; // Limpiamos clases previas
-                modeIcon.classList.add('fa-solid', 'fa-sun');
+                modeIcon.classList.add('fa-solid', 'fa-toggle-off');
             } else {
                 // Cambiar a modo claro
                 body.classList.remove('theme--dark');
@@ -65,9 +80,16 @@
                 
                 // Cambiar el icono al sol
                 modeIcon.className = ''; // Limpiamos clases previas
-                modeIcon.classList.add('fa-solid', 'fa-moon');
+                modeIcon.classList.add('fa-solid', 'fa-toggle-on');
             }
         }
+
+        var typed = new Typed(".auto-type", {
+        strings: ["Eduardo Benavides"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+    })
     </script>
     
 </body>

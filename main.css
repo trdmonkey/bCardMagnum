@@ -206,8 +206,8 @@ html, body {
   .profile-details {
     flex-basis: 400px;
   }
-  .profile-details .two {
-    letter-spacing: 5px;
+  .profile-details .one {
+    letter-spacing: 3px;
   }
   .profile-pils {
     justify-content: flex-end;
@@ -243,8 +243,8 @@ html, body {
     text-align: left;
     margin-left: 0;
   }
-  #container .profile-details .two {
-    letter-spacing: 5px;
+  #container .profile-details .one {
+    letter-spacing: 3px;
   }
   #container .profile-cv {
     text-align: center;
