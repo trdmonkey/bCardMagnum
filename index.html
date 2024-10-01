@@ -15,7 +15,7 @@
     <div id="container">
         <div class="header">
             <label for="night" class="night-mode" onclick="enableNight()">
-                <i class="fa-solid fa-moon"></i>
+                <i id="mode-icon" class="fa-solid fa-sun"></i>
             </label>
         </div>
         <section class="left-section">
@@ -42,7 +42,8 @@
         let enableNight = () => {
             var body = document.getElementById("body");
             var logoImg = document.getElementById("logo-img");
-    
+            var modeIcon = document.getElementById("mode-icon"); // Icono de la luna o el sol
+        
             if (body.classList.contains('theme--light')) {
                 // Cambiar a modo oscuro
                 body.classList.remove('theme--light');
@@ -50,6 +51,10 @@
                 
                 // Cambiar la imagen a la versión clara
                 logoImg.src = "./assets/img/logo.png";
+                
+                // Cambiar el icono a la luna
+                modeIcon.className = ''; // Limpiamos clases previas
+                modeIcon.classList.add('fa-solid', 'fa-sun');
             } else {
                 // Cambiar a modo claro
                 body.classList.remove('theme--dark');
@@ -57,9 +62,14 @@
                 
                 // Cambiar la imagen a la versión oscura
                 logoImg.src = "./assets/img/logooscuro.png";
+                
+                // Cambiar el icono al sol
+                modeIcon.className = ''; // Limpiamos clases previas
+                modeIcon.classList.add('fa-solid', 'fa-moon');
             }
         }
     </script>
+    
 </body>
 </html>
 
