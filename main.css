@@ -154,7 +154,7 @@ html, body {
   font-size: 13px;
   transition: all 0.3s;
   cursor: pointer;
-  margin: 5px;
+  margin: 15px;
   color: var(--text-primary);
 }
 .profile-pils .pils a, .profile-pils .pils a:visited, .profile-pils .pils a:link {
@@ -164,17 +164,18 @@ html, body {
   padding: 5px 10px;
 }
 .profile-pils .pils a i, .profile-pils .pils a:visited i, .profile-pils .pils a:link i {
-  padding-right: 2px;
+  padding-right: 50px;
 }
 .profile-pils .pils:nth-child(1):hover {
-  box-shadow: inset 0 0 0 1px #6f95fe, 0 10px 35px -10px #6f95fe;
+  box-shadow: inset 0 0 0 1px green, 0 10px 35px -10px green;
+  color: green;
 }
 .profile-pils .pils:nth-child(1):hover i {
-  color: #6f95fe;
+  color: green;
 }
-.profile-pils .pils:nth-child(2):hover {
+/* .profile-pils .pils:nth -child(2):hover {
   box-shadow: inset 0 0 0 1px #fff, 0 10px 30px -10px rgba(100, 100, 100, 0.6);
-}
+} */
 .profile-pils .pils:nth-child(2):hover i {
   color: #fff;
 }
@@ -190,6 +191,136 @@ html, body {
 .profile-pils .pils:nth-child(4):hover i {
   color: #163ca3;
 }
+
+
+
+
+
+
+
+/* .profile-pics {
+  position: fixed; 
+  bottom: 10px;    
+  right: 10px;     
+  z-index: 10;     
+  display: block;  
+} */
+.btn {
+  background: #49D75C;
+  border: 0px solid #49D75C;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all .25s ease;
+  width: 60px;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+.btn:not(.loading):hover {
+  box-shadow: 0px 10px 25px 0px rgba(73, 215, 92,.4);
+}
+.btn:not(.loading):hover i {
+  transform: translate(0px);
+}
+.btn i {
+  font-size: 1.45rem;
+  position: absolute;
+  left: 0px;
+  pointer-events: none;
+  z-index: 10;
+  background: inherit;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all .25s ease;
+}
+.btn .text {
+  width: 0px;
+  display: block;
+  position: relative;
+  pointer-events: none;
+  transition: all .25s ease;
+  position: absolute;
+  left: 0;
+}
+.loading-animate {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .25s ease;
+}
+.loading-animate:after {
+  content: '';
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-left: 3px solid #fff;
+  animation: loading infinite .8s ease .05s;
+  position: absolute;
+}
+.loading-animate:before {
+  content: '';
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-left: 3px solid #fff;
+  animation: loading infinite .8s linear;
+  position: absolute;
+  opacity: .6;
+}
+.btn.loading {
+  width: 60px;
+}
+.btn.loading i {
+  transform: rotate(-315deg);
+  padding-bottom: 4px;
+  padding-left: 3px;
+}
+.btn.loading .text {
+  transform: translate(-140px);
+}
+.btn.loading .loading-animate {
+  opacity: 1;
+}
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 768px) {
   #container {
@@ -213,6 +344,12 @@ html, body {
     justify-content: flex-end;
     margin: 0px 10px;
     flex-basis: 240px;
+  }
+  .btn.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;  /* Espacio desde la parte inferior */
+    right: 20px;   /* Espacio desde la parte derecha */
+    z-index: 1000; /* Para que esté siempre visible */
   }
 }
 @keyframes fade_in {
@@ -247,13 +384,38 @@ html, body {
     letter-spacing: 3px;
   }
   #container .profile-cv {
-    text-align: center;
+    text-align: left;
     margin-left: 0;
   }
   #container .profile-pils {
     justify-content: center;
     margin-top: 20px;
   }
+  .profile-pics .btn {
+    left: 145px;
+  }
+  /* .profile-pics .btn:hover {
+    box-shadow: 0px 10px 25px 0px rgba(73, 215, 92,.4);
+  } */
+}
+
+.custom-fade-out {
+  opacity: 1;
+  animation: fadeOutEffect 2s ease forwards;
+}
+
+@keyframes fadeOutEffect {
+  0% {
+    opacity: 1;
+    color: #000; /* Comienza negro */
+    transform: translateY(0); /* Posición inicial */
+  }
+  100% {
+    opacity: 0;
+    color: #ff0000; /* Cambia a rojo mientras se desvanece */
+    transform: translateY(-40px); /* Se mueve hacia arriba */
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
+

@@ -1,98 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- meta character -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
     <!-- devices format -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- title -->
     <title>bCard Magnum SC</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/img/icon16.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icon16.png"
+      type="image/x-icon"
+    />
 
     <!-- css -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
 
     <!-- fontawesome icons -->
-    <script src="https://kit.fontawesome.com/20cee36f21.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/20cee36f21.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- cnd typed -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> 
-
-</head>
-<body id="body" class="theme--dark">
-    <input type="checkbox" id="menu">
-    <input type="checkbox" id="night">
+    <!-- CDN typed -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  </head>
+  <body id="body" class="theme--dark">
+    <input type="checkbox" id="menu" />
+    <input type="checkbox" id="night" />
     <div id="container">
-        <div class="header">
-            <label for="night" class="night-mode" onclick="enableNight()">
-                <i id="mode-icon" class="fa-solid fa-toggle-off"></i>
-            </label>
+      <div class="header">
+        <label for="night" class="night-mode" onclick="enableNight()">
+          <i id="mode-icon" class="fa-solid fa-toggle-off"></i>
+        </label>
+      </div>
+      <section class="left-section">
+        <img
+          src="./assets/img/logo.png"
+          alt=""
+          class="profile-pic"
+          id="logo-img"
+        />
+        <div class="profile-details">
+          <span class="profile-maps">
+            <i class="fa-solid fa-location-dot"></i> Pasto, Nariño.
+          </span>
+          <p class="profile-name">MAGNUM Solucion Contable</p>
+          <span class="auto-type profile-summary one"></span><br />
+          <!-- <span class="profile-summary one">Eduardo Benavides</span><br> -->
+          <span class="profile-summary two">Gerente General</span>
+          <a href="#" class="profile-cv"><i id="mailIcon" class="fa-regular fa-envelope"></i> &nbsp;Agendar Cita</a>
+          <!-- <div class="profile-pils">
+                    <span class="pils">
+                        <a href="https://wa.me/573001234567" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </span>
+                </div> -->
         </div>
-        <section class="left-section">
-            <img src="./assets/img/logo.png" alt="" class="profile-pic" id="logo-img">
-            <div class="profile-details">
-                <span class="profile-maps">
-                    <i class="fa-solid fa-location-dot"></i> Pasto, Nariño.
-                </span>
-                <p class="profile-name">MAGNUM Solucion Contable</p>
-                <span class="auto-type profile-summary one"></span><br>
-                <!-- <span class="profile-summary one">Eduardo Benavides</span><br> -->
-                <span class="profile-summary two">Gerente General</span>
-                <a href="#" class="profile-cv">Agendar Cita</a>
-            </div>
-            <div class="profile-pils">
+        <!-- <div class="profile-pils">
                 <span class="pils"><a href="#"><i class="fa-brands fa-facebook"></i></a></span>
                 <span class="pils"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></span>
                 <span class="pils"><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
                 <span class="pils"><a href="#"><i class="fa-brands fa-linkedin"></i></a></span>
-            </div>
-        </section>
-        <div class="front-smooth"></div>
+            </div> -->
+        <div class="profile-pics">
+          <button class="btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="text"></span>
+            <span class="loading-animate"></span>
+          </button>
+        </div>
+      </section>
+      <div class="front-smooth"></div>
     </div>
     <script>
-        let enableNight = () => {
-            var body = document.getElementById("body");
-            var logoImg = document.getElementById("logo-img");
-            var modeIcon = document.getElementById("mode-icon"); // Icono de la luna o el sol
-        
-            if (body.classList.contains('theme--light')) {
-                // Cambiar a modo oscuro
-                body.classList.remove('theme--light');
-                body.classList.add('theme--dark');
-                
-                // Cambiar la imagen a la versión clara
-                logoImg.src = "./assets/img/logo.png";
-                
-                // Cambiar el icono a la luna
-                modeIcon.className = ''; // Limpiamos clases previas
-                modeIcon.classList.add('fa-solid', 'fa-toggle-off');
-            } else {
-                // Cambiar a modo claro
-                body.classList.remove('theme--dark');
-                body.classList.add('theme--light');
-                
-                // Cambiar la imagen a la versión oscura
-                logoImg.src = "./assets/img/logooscuro.png";
-                
-                // Cambiar el icono al sol
-                modeIcon.className = ''; // Limpiamos clases previas
-                modeIcon.classList.add('fa-solid', 'fa-toggle-on');
-            }
+      let enableNight = () => {
+        var body = document.getElementById("body");
+        var logoImg = document.getElementById("logo-img");
+        var modeIcon = document.getElementById("mode-icon"); // Icono de la luna o el sol
+        var mail = document.getElementById("mailIcon");
+
+        if (body.classList.contains("theme--light")) {
+          // Cambiar a modo oscuro
+          body.classList.remove("theme--light");
+          body.classList.add("theme--dark");
+
+          // Cambiar la imagen a la versión clara
+          logoImg.src = "./assets/img/logo.png";
+
+          // Cambiar el icono a la luna
+          modeIcon.className = ""; // Limpiamos clases previas
+          modeIcon.classList.add("fa-solid", "fa-toggle-off");
+
+          // Cambiar el icono de correo electronico (regular)
+          mail.className = "";
+          mail.classList.add("fa-regular", "fa-envelope");
+        } else {
+          // Cambiar a modo claro
+          body.classList.remove("theme--dark");
+          body.classList.add("theme--light");
+
+          // Cambiar la imagen a la versión oscura
+          logoImg.src = "./assets/img/logooscuro.png";
+
+          // Cambiar el icono al sol
+          modeIcon.className = ""; // Limpiamos clases previas
+          modeIcon.classList.add("fa-solid", "fa-toggle-on");
+
+          // Cambiar el icono de correo electronico (solid)
+          mail.className = "";
+          mail.classList.add("fa-solid", "fa-envelope");
         }
+      };
 
-        var typed = new Typed(".auto-type", {
+      var typed = new Typed(".auto-type", {
         strings: ["Eduardo Benavides"],
-        typeSpeed: 50,
-        backSpeed: 50,
-        loop: true
-    })
+        typeSpeed: 80,
+        backSpeed: 155,
+        loop: true,
+        /* startDelay: 5000, */
+        showCursor: false,
+        cursorChar: "_" /* Caracter o cursor (desactivado) */,
+        fadeOut: true,
+        fadeOutDelay: 1000,
+        fadeOutClass: "custom-fade-out",
+      });
+
+      document.querySelector(".btn").addEventListener("click", (evt) => {
+        evt.target.classList.add("loading");
+
+        setTimeout(() => {
+          evt.target.classList.remove("loading");
+        }, 3000);
+      });
+
+
+      /* // Seleccionar el botón de WhatsApp
+document.querySelector(".whatsapp-btn").addEventListener("click", function () {
+  const button = this;
+
+  // Agregar la clase 'loading' para iniciar la animación
+  button.classList.add("loading");
+
+  // Esperar a que termine la animación
+  button.addEventListener(
+    "animationend",
+    function () {
+      // Redirigir a WhatsApp después de la animación
+      window.open("https://wa.me/+573245695802", "_blank"); // Reemplaza por el número del dueño
+      // Remover la clase 'loading' para futuras interacciones
+      button.classList.remove("loading");
+    },
+    { once: true } // Para asegurarnos de que solo se ejecute una vez
+  );
+}); */
+
     </script>
-    
-</body>
+  </body>
 </html>
-
-
