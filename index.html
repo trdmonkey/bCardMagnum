@@ -136,30 +136,15 @@
 
         setTimeout(() => {
           evt.target.classList.remove("loading");
+
+          /* window.location.href = "https://wa.me/+573245695802"; */
+          const mensaje = "Hola *Sr. Eduardo Benavides,*_estoy interesado en sus servicios de Tecnología. Quisiera saber más detalles._ Gracias!";
+          
+          // Codificar el mensaje para la URL
+          const mensajeCodificado = encodeURIComponent(mensaje);
+          window.open(`https://wa.me/+573245695802?text=${mensajeCodificado}`, "_blank");
         }, 3000);
       });
-
-
-      /* // Seleccionar el botón de WhatsApp
-document.querySelector(".whatsapp-btn").addEventListener("click", function () {
-  const button = this;
-
-  // Agregar la clase 'loading' para iniciar la animación
-  button.classList.add("loading");
-
-  // Esperar a que termine la animación
-  button.addEventListener(
-    "animationend",
-    function () {
-      // Redirigir a WhatsApp después de la animación
-      window.open("https://wa.me/+573245695802", "_blank"); // Reemplaza por el número del dueño
-      // Remover la clase 'loading' para futuras interacciones
-      button.classList.remove("loading");
-    },
-    { once: true } // Para asegurarnos de que solo se ejecute una vez
-  );
-}); */
-
     </script>
   </body>
 </html>
