@@ -133,7 +133,7 @@ html, body {
 }
 
 .profile-details .two {
-  font-family: "Poppins", serif;
+  /* font-family: "Poppins", serif; */
   /* font-weight: 100; */
   font-style: italic;
   /* font-size: 20px; */
@@ -141,10 +141,38 @@ html, body {
 
 #container .left-section .profile-details .profile-cv {
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
   color: var(--text-cv);
   font-weight: 700;
 }
+
+#container .profile-cv {
+  width: 130px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  
+  color: var(--button-text-color, #fff); 
+  text-align: left;
+  font-weight: 700;
+  border-radius: 15px; 
+  border: none; /* Sin borde */
+  text-decoration: none; /* Quitar subrayado */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave al pasar el ratón */
+  cursor: pointer;
+}
+
+
+
+#container .profile-cv:hover {
+  background-color: var(--button-hover-background, white); /* Cambio de color en hover */
+  transform: translateY(-2px); /* Ligeramente levantado en hover */
+}
+
+#container .profile-cv:active {
+  transform: translateY(0); /* Vuelve a su posición cuando se presiona */
+  background-color: var(--button-active-background, #1c598a); /* Color al hacer clic */
+}
+
 
 .profile-pils {
   display: flex;
