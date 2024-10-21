@@ -161,8 +161,6 @@ html, body {
   cursor: pointer;
 }
 
-
-
 #container .profile-cv:hover {
   background-color: var(--button-hover-background, white); /* Cambio de color en hover */
   transform: translateY(-2px); /* Ligeramente levantado en hover */

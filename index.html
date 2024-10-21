@@ -53,7 +53,13 @@
           <span class="auto-type profile-summary one"></span><br />
           <!-- <span class="profile-summary one">Eduardo Benavides</span><br> -->
           <span class="profile-summary two">Gerente General</span>
-          <a href="#" class="profile-cv"><i id="mailIcon" class="fa-regular fa-envelope"></i> &nbsp;Agendar Cita</a>
+          <!-- <a href="#" class="profile-cv"><i id="mailIcon" class="fa-regular fa-envelope"></i> &nbsp;Agendar Cita</a> -->
+
+          <a href="#" class="profile-cv" id="emailLink">
+            <i id="mailIcon" class="fa-regular fa-envelope"></i> &nbsp;Agendar
+            Cita
+          </a>
+
           <!-- <div class="profile-pils">
                     <span class="pils">
                         <a href="https://wa.me/573001234567" target="_blank">
@@ -138,13 +144,20 @@
           evt.target.classList.remove("loading");
 
           /* window.location.href = "https://wa.me/+573245695802"; */
-          const mensaje = "Hola *Sr. Eduardo Benavides,*_estoy interesado en sus servicios de Tecnología. Quisiera saber más detalles._ Gracias!";
-          
-          // Codificar el mensaje para la URL
+          const mensaje =
+            "Hola *Sr. Eduardo Benavides,*_estoy interesado en sus servicios de Tecnología. Quisiera saber más detalles._ Gracias!";
           const mensajeCodificado = encodeURIComponent(mensaje);
-          window.open(`https://wa.me/+573245695802?text=${mensajeCodificado}`, "_blank");
+          window.open(
+            `https://wa.me/+573146218476?text=${mensajeCodificado}`,
+            "_blank"
+          );
         }, 3000);
       });
+
+      document.getElementById("emailLink").onclick = function () {
+        window.location.href =
+          "mailto:magnumsc@gmail.com?subject=Solicitud de Cita&body=Sr Eduardo Benavides%0D%0A%0D%0ABuen día%0D%0A%0D%0AQuisiera agendar una cita, para hablar sobre los servicios tecnologicos que su empresa tiene a nuestra disposición.%0D%0A%0D%0AGracias!";
+      };
     </script>
   </body>
 </html>
